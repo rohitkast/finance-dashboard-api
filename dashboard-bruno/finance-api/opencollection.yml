@@ -1,0 +1,39 @@
+opencollection: 1.0.0
+
+info:
+  name: finance-api
+config:
+  proxy:
+    inherit: true
+    config:
+      protocol: http
+      hostname: ""
+      port: ""
+      auth:
+        username: ""
+        password: ""
+      bypassProxy: ""
+
+request:
+  scripts:
+    - type: before-request
+      code: |-
+        const token = bru.getEnvVar("ACCESS_TOKEN");
+
+        if (token) {
+          req.setHeader("Authorization", `Bearer ${token}`);
+        } else {
+          console.warn("ACCESS_TOKEN not found in environment!");
+        }
+    - type: after-response
+      code: |-
+        data = res.getBody()
+        if (data.access_token) {
+          bru.setEnvVar("ACCESS_TOKEN", data.access_token)
+        }
+bundled: false
+extensions:
+  bruno:
+    ignore:
+      - node_modules
+      - .git

@@ -1,0 +1,40 @@
+info:
+  name: GetFilteredTx
+  type: http
+  seq: 6
+
+http:
+  method: GET
+  url: "{{baseUrl}}/transaction/filter?asc=bool&dsc=bool&month=MM&year=YYYY&from=YYYY/MM/DD&to=YYYY/MM/DD&exp=bool&inc=bool"
+  params:
+    - name: asc
+      value: bool
+      type: query
+    - name: dsc
+      value: bool
+      type: query
+    - name: month
+      value: MM
+      type: query
+    - name: year
+      value: YYYY
+      type: query
+    - name: from
+      value: YYYY/MM/DD
+      type: query
+    - name: to
+      value: YYYY/MM/DD
+      type: query
+    - name: exp
+      value: bool
+      type: query
+    - name: inc
+      value: bool
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,23 @@
+info:
+  name: CreateUser
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{baseUrl}}/auth/create"
+  body:
+    type: json
+    data: |-
+      {
+        "email": "rohit3@kasturi.com",
+        "password": "xyz123456",
+        "role": "admin"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

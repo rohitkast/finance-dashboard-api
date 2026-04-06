@@ -1,0 +1,23 @@
+info:
+  name: CreateTx
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: "{{baseUrl}}/transaction/create"
+  body:
+    type: json
+    data: |-
+      {
+        "Amount": 45000, 
+        "Description": "wowwwww",
+        "Category": "income"   
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

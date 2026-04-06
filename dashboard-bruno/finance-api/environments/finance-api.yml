@@ -1,0 +1,6 @@
+name: finance-api
+variables:
+  - name: baseUrl
+    value: http://localhost:8080/api
+  - secret: true
+    name: ACCESS_TOKEN
