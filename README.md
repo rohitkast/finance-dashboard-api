@@ -1,15 +1,5 @@
 # Personal Finance Dashboard API
 
-## A Quick Note from Me
-
-Hello there. I was very excited about this for several reasons. First, I am currently in an internship using Go, Gin, and GORM for backend development. This project was a win-win for me because I learned the tech stack my current company uses in-depth. This knowledge allows me to go beyond bug fixing and actually suggest architectural improvements. On that note, securing this internship was a major win in itself!
-
-The second reason for my excitement is that this role allows me to leverage two of my strongest skills, finance and programming. While you might find an engineer with more specialized experience, it would be difficult to find a more effective combination of finance and engineering.
-
-I don’t just think in code, I think in terms of product. In my current internship, I don’t just handle development, I also suggest new features and identify which ones are unnecessary. Given this mindset, I am confident that I can bring more value to your product than a typical engineer.
-
----
-
 ## How I used AI for this
 
 ---
